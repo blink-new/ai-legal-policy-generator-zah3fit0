@@ -7,17 +7,17 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 
 const PolicyForm: React.FC = () => {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-6 text-center">Generate Legal Policy</h1>
-      <div className="grid gap-4 md:grid-cols-2">
+    <div className="container mx-auto p-4 max-w-2xl bg-white shadow-md rounded-lg mt-10">
+      <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">Generate Legal Policy</h1>
+      <div className="grid gap-6 md:grid-cols-2">
         <div className="grid gap-2">
-          <Label htmlFor="businessName">Business Name</Label>
-          <Input id="businessName" placeholder="Your Business Name" />
+          <Label htmlFor="businessName" className="text-gray-700">Business Name</Label>
+          <Input id="businessName" placeholder="Your Business Name" className="border-gray-300 focus:border-blue-500 focus:ring-blue-500" />
         </div>
         <div className="grid gap-2">
-          <Label htmlFor="policyType">Policy Type</Label>
+          <Label htmlFor="policyType" className="text-gray-700">Policy Type</Label>
           <Select>
-            <SelectTrigger id="policyType">
+            <SelectTrigger id="policyType" className="border-gray-300 focus:border-blue-500 focus:ring-blue-500">
               <SelectValue placeholder="Select policy type" />
             </SelectTrigger>
             <SelectContent>
@@ -27,12 +27,12 @@ const PolicyForm: React.FC = () => {
           </Select>
         </div>
       </div>
-      <div className="grid gap-2 mt-4">
-        <Label htmlFor="businessDescription">Business Description</Label>
-        <Textarea id="businessDescription" placeholder="Describe your business and its activities..." rows={6} />
+      <div className="grid gap-2 mt-6">
+        <Label htmlFor="businessDescription" className="text-gray-700">Business Description</Label>
+        <Textarea id="businessDescription" placeholder="Describe your business and its activities..." rows={6} className="border-gray-300 focus:border-blue-500 focus:ring-blue-500" />
       </div>
-      <div className="mt-6 text-center">
-        <Button size="lg">Generate Policy</Button>
+      <div className="mt-8 text-center">
+        <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-md">Generate Policy</Button>
       </div>
     </div>
   );
